@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="http://localhost/php/Actividad_7/Monkey/texto_azar.php" method="post" target="_blank">
+        <fieldset>
+            <legend>Monos</legend>
+            <label>Frase
+                <input type="text" name="frase" required>
+            </label>
+            <br><br>
+            <label>Modo
+                <select name="modo" id="modo" required>
+                    <option value="normal">Normal</option>
+                    <option value="palabras">Palabras</option>
+                    <option value="orden">Orden</option>
+                </select>
+            </label>
+        </fieldset>
+        <br><br>
+        <button type="submit">Enviar</button>
+        <button type="reset">Borrar</button>
+    </form>
+</body>
+</html>
