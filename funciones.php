@@ -19,11 +19,22 @@
         }
             
     }
+    function titulo ($azar_titulo,$azar_letras,$azar_caracter)
+    {
+        for($l=0;$l<=$azar_titulo;$l++)
+        {
+            $azar_letras=rand(32,126);
+            $azar_caracter=chr($azar_letras);
+            echo $azar_caracter;
+        }
+            
+    }
     $frase=(isset($_POST["frase"])&&$_POST["frase"]!="")? $_POST["frase"]: "No hay frase a buscar";
     $modo=(isset($_POST["modo"])&&$_POST["modo"]!="")? $_POST["modo"]: "No seleccionó modo";
     $azar_letras=1;
     $azar_prt1=rand(500,700);
     $azar_prt2=rand(200,700);
+    $azar_titulo=rand(5,25);
     $azar_palabra;
     $azar_caracter="c";
     $x;
@@ -33,6 +44,9 @@
     $frase_desorden=implode(" ",$palabras);
     if($modo=="normal")
     {
+        echo "Titulo:";
+        titulo ($azar_titulo,$azar_letras,$azar_caracter);
+        echo "<br><br>";
         azar_prt1($azar_prt1,$azar_letras,$azar_caracter);
         echo "<strong>".$frase."</strong>";
         azar_prt2($azar_prt2,$azar_letras,$azar_caracter);
@@ -45,6 +59,9 @@
         {
             $celdas++;
         }
+        echo "Titulo:";
+        titulo ($azar_titulo,$azar_letras,$azar_caracter);
+        echo "<br><br>";
         for($c=0;$c<$celdas;$c++)
         {
             azar_prt1($azar_prt2,$azar_letras,$azar_caracter);
@@ -54,8 +71,21 @@
     }
     if($modo=="orden")
     {
+        echo "Titulo:";
+        titulo ($azar_titulo,$azar_letras,$azar_caracter);
+        echo "<br><br>";
         azar_prt1($azar_prt1,$azar_letras,$azar_caracter);
         echo "<strong>".$frase_desorden."</strong>";
+        azar_prt2($azar_prt2,$azar_letras,$azar_caracter);
+    }
+    if ($modo=="invertido")
+    {
+        echo "Titulo:";
+        titulo ($azar_titulo,$azar_letras,$azar_caracter);
+        echo "<br><br>";
+        $frase_ivertida=strrev($frase);
+        azar_prt1($azar_prt2,$azar_letras,$azar_caracter);
+        echo "<strong>".$frase_ivertida."</strong>";
         azar_prt2($azar_prt2,$azar_letras,$azar_caracter);
     }
     echo '<br><br>';
@@ -96,11 +126,4 @@
         $mes = "Diciembre";
 
     echo "<br>Fecha de creacion del libro: ".$dia." de ".$mes." de ".$anio;
-    /*$palabras=explode(" ",$frase);
-    echo "<br><br>";
-    echo var_dump($palabras);
-    echo "<br><br>";
-    echo "<br><br>";
-    echo $modo;*/
-    
 ?>
