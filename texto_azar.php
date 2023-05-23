@@ -1,3 +1,4 @@
+
 <?php
     function azar_prt1 ($azar_prt1,$azar_letras,$azar_caracter)
     {
@@ -16,6 +17,7 @@
             $azar_caracter=chr($azar_letras);
             echo $azar_caracter;
         }
+            
     }
     $frase=(isset($_POST["frase"])&&$_POST["frase"]!="")? $_POST["frase"]: "No hay frase a buscar";
     $modo=(isset($_POST["modo"])&&$_POST["modo"]!="")? $_POST["modo"]: "No seleccionó modo";
@@ -56,6 +58,44 @@
         echo "<strong>".$frase_desorden."</strong>";
         azar_prt2($azar_prt2,$azar_letras,$azar_caracter);
     }
+    echo '<br><br>';
+    $lugar = ( isset ($_POST["zona"]) && $_POST["zona"] != "" )? $_POST["zona"] : false;
+    date_default_timezone_set($lugar);
+    $fecha=date("d-M-Y");
+    $hora=date("H:i:s");
+
+    echo "<strong>La fecha de consulta de este libro fue: </strong>".$fecha."<strong> a las </strong>".$hora."<strong> en </strong>".$lugar;
+
+    $dia = rand(01,30);
+    $mes = rand(01,12);
+    $anio = rand(1000, 2023);
+
+    if($mes==1)
+        $mes = "Enero";
+    if($mes==2)
+        $mes = "Febrero";
+    if($mes==3)
+        $mes = "Marzo";
+    if($mes==4)
+        $mes = "Abril";
+    if($mes==5)
+        $mes = "Mayo";
+    if($mes==6)
+        $mes = "Junio";
+    if($mes==7)
+        $mes = "Julio";            
+    if($mes==8)
+        $mes = "Agosto";
+    if($mes==9)
+        $mes = "Septiembre";
+    if($mes==10)
+        $mes = "Octubre";
+    if($mes==11)
+        $mes = "Noviembre";
+    if($mes==12)
+        $mes = "Diciembre";
+
+    echo "<br>Fecha de creacion del libro: ".$dia." de ".$mes." de ".$anio;
     /*$palabras=explode(" ",$frase);
     echo "<br><br>";
     echo var_dump($palabras);

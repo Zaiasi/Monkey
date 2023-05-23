@@ -1,0 +1,75 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body
+{
+     background-image:url('./fractal.jpg');
+    
+}
+#contenedor{
+    width: 70%;
+    height: 70%;
+    margin: auto;
+    border: 3px solid rgb(32, 112, 139);
+    
+}
+header h1{
+    background: rgba(7, 81, 61, 0.366);
+}
+header{
+    background-image: url("./kime1.jpg");
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    line-height: 200%;
+    border-bottom:3px dashed blueviolet;
+
+}
+nav{
+    background-image: url("./kimetsu1.jpg");
+    height: 30px;
+    border-bottom:3px dashed black ;
+}
+nav ul li {
+    background: pink;
+    float: left;
+    list-style: none;
+    margin-left:10%;
+    margin-top:3px;
+    
+
+}
+.clear{
+    clear: both;
+
+}
+#contenido{
+    float: left;
+    width:calc(60% - 2%) ;
+    background-image:url(./kimetsu.jpg);
+    min-height:300px;
+    padding: 1%;
+}
+.articulo h2{
+    color:rgb(0, 0, 0);
+    background: rgba(198, 185, 5, 0.547);
+
+}
+.articulo p{
+    color:rgb(0, 0, 0);
+    background: rgba(151, 192, 17, 0.421);
+
+}
+aside{
+    float: left;
+    width:calc(40% - 2%) ;
+    background-image:url(./kime.jpg);
+    min-height:300px;
+    padding: 1%;
+    color: rgba(249, 249, 249, 0.931);
+}
+footer{
+    background: rgba(29, 98, 98, 0.794);
+    text-align: center;
+}
