@@ -4,7 +4,7 @@
 }
 body
 {
-     background-image:url('./fractal.jpg');
+     background-image:url('./imagenes/fractal.jpg');
     
 }
 #contenedor{
@@ -18,7 +18,7 @@ header h1{
     background: rgba(7, 81, 61, 0.366);
 }
 header{
-    background-image: url("./kime1.jpg");
+    background-image: url("./imagenes/kime1.jpg");
     width: 100%;
     margin: auto;
     text-align: center;
@@ -27,7 +27,7 @@ header{
 
 }
 nav{
-    background-image: url("./kimetsu1.jpg");
+    background-image: url("./imagenes/kimetsu1.jpg");
     height: 30px;
     border-bottom:3px dashed black ;
 }
@@ -47,7 +47,7 @@ nav ul li {
 #contenido{
     float: left;
     width:calc(60% - 2%) ;
-    background-image:url(./kimetsu.jpg);
+    background-image:url("./imagenes/kimetsu.jpg");
     min-height:300px;
     padding: 1%;
 }
@@ -64,7 +64,7 @@ nav ul li {
 aside{
     float: left;
     width:calc(40% - 2%) ;
-    background-image:url(./kime.jpg);
+    background-image:url('imagenes/./kime.jpg');
     min-height:300px;
     padding: 1%;
     color: rgba(249, 249, 249, 0.931);
